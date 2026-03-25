@@ -1,0 +1,252 @@
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 14, 20, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+}
+.nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--green-200); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; }
+.nav-links a:hover { color: var(--accent-color); }
+
+/* Hero */
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.hero-greeting { color: var(--accent-color); font-family: monospace; font-size: 1.1rem; }
+.hero-name { font-size: 4rem; color: var(--green-50); line-height: 1.1; margin: 0; }
+.hero-subtitle { font-size: 3rem; color: var(--gray-100); line-height: 1.1; margin: 0; }
+.hero-desc { max-width: 600px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; }
+.hero-cta { display: flex; gap: 1rem; margin-top: 1.5rem; }
+
+/* Experience */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  border-left: 2px solid var(--border-color);
+  padding-left: 2rem;
+}
+.exp-item {
+  position: relative;
+}
+.exp-item::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  top: 5px;
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid #E4312b; /* Palestinian red triangle */
+  background: transparent;
+  border-radius: 0;
+}
+.exp-title { font-size: 1.25rem; color: var(--green-100); margin-bottom: 0.25rem; }
+.exp-company { color: var(--accent-color); font-weight: 600; }
+.exp-date { font-family: monospace; color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+.exp-desc { color: var(--text-secondary); list-style-position: inside; }
+.exp-desc li { margin-bottom: 0.5rem; }
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.project-card {
+  background: var(--bg-surface);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px var(--blue-900);
+}
+.project-header { margin-bottom: 1rem; }
+.project-title { font-size: 1.5rem; color: var(--green-100); margin-bottom: 1rem; }
+.project-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--gray-100);
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.skill-category h3 { color: var(--green-200); margin-bottom: 1rem; font-size: 1.2rem; }
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skill-tag {
+  background: var(--blue-600);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+.skill-tag:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent-color);
+}
+
+/* Buttons & Layout Tweaks */
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.github-link {
+  color: var(--gray-100);
+  width: 24px;
+  height: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.github-link:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Cultural Aesthetics --- */
+
+/* Arabic Calligraphy Watermark */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+.arabic-watermark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Aref Ruqaa', serif;
+  font-size: 10rem;
+  color: var(--accent-color);
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+.hero-greeting, .hero-name, .hero-subtitle, .hero-desc, .hero-cta {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tatreez Button Hover */
+.btn-tatreez {
+  color: var(--green-50);
+  position: relative;
+  background-clip: padding-box;
+  border: 2px solid var(--accent-color);
+  background-color: var(--blue-900);
+  overflow: hidden;
+  z-index: 1;
+}
+.btn-tatreez::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-image: radial-gradient(var(--accent-color) 20%, transparent 20%),
+                    radial-gradient(var(--accent-color) 20%, transparent 20%);
+  background-color: var(--blue-700);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.btn-tatreez:hover {
+  color: var(--green-50);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(82, 183, 136, 0.3);
+  border-color: transparent;
+}
+.btn-tatreez:hover::before {
+  opacity: 0.8;
+}
+
+/* Palestinian Tatreez (Embroidery) Pattern Base64 */
+.tatreez-border {
+  position: relative;
+}
+.tatreez-border::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-image: radial-gradient(var(--accent-color) 20%, transparent 20%),
+                    radial-gradient(var(--accent-color) 20%, transparent 20%);
+  background-color: transparent;
+  background-position: 0 0, 10px 10px;
+  background-size: 20px 20px;
+  opacity: 0.15;
+  clip-path: polygon(0 40%, 100% 40%, 100% 60%, 0 60%);
+}
+
+@media (max-width: 768px) {
+  .hero-name { font-size: 3rem; }
+  .hero-subtitle { font-size: 2rem; }
+  section { padding: 4rem 1.5rem; }
+}
