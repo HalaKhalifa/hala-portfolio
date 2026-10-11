@@ -29,7 +29,7 @@ const Projects = () => {
       title: "Olist Late Delivery Prediction",
       desc: "Building an end-to-end MLOps system to predict late e-commerce deliveries, with a containerized prediction API, model tracking, input validation, and monitoring.",
       tech: ["Python", "FastAPI", "MLflow", "DVC", "Docker", "Prometheus"],
-      github: null,
+      github: "https://github.com/HalaKhalifa/olist-mlops.git",
       mark: "OD"
     },
     {
