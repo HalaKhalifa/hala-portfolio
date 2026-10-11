@@ -3,13 +3,31 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      title: "NLP Intern",
+      title: "MLOps Scholarship Trainee",
+      company: "Qafza",
+      date: "08/2026 – Present | Remote",
+      points: [
+        "Training in production ML pipelines, APIs, Docker, data and model versioning, and monitoring."
+      ]
+    },
+    {
+      title: "AI Software Engineer Intern",
+      company: "Palsoft",
+      date: "03/2026 – 05/2026 | Remote",
+      points: [
+        "Built five full-stack applications using Python, Django, React, and Docker.",
+        "Designed scalable application architectures and maintainable project structures.",
+        "Developed Mentrix, an AI learning platform with OCR, code evaluation, and Gemini-powered mentorship."
+      ]
+    },
+    {
+      title: "NLP & LLMs Intern",
       company: "Reconess",
       date: "09/2025 – 01/2026 | Remote",
       points: [
-        "Built and evaluated Arabic RAG-based chatbot system using embeddings and vector databases.",
-        "Worked on LLM integration, prompt design, and performance optimization for local deployment.",
-        "Implemented user authentication, chat history, and basic analytics in a Django-based backend."
+        "Built Bosala AI, an Arabic RAG platform for domain-specific question answering.",
+        "Implemented document ingestion, embeddings, Qdrant vector search, and LLM response generation.",
+        "Developed Django REST APIs, authentication, chat history, and privacy-aware analytics."
       ]
     },
     {
@@ -17,9 +35,8 @@ const Experience = () => {
       company: "Aqlama.ai",
       date: "10/2024 – 01/2025 | Remote",
       points: [
-        "Developed and optimized CNN/RNN models for sentiment analysis and image classification.",
-        "Designed the Mural Organizer AI System for auto-arranging wall murals based on color harmony.",
-        "Built end-to-end preprocessing and feature extraction pipelines using Python and OpenCV."
+        "Developed CNN and RNN models for sentiment analysis and image classification.",
+        "Built a mural layout system using image preprocessing, color clustering, and visual harmony evaluation."
       ]
     },
     {

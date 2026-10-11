@@ -4,19 +4,31 @@ const Skills = () => {
   const skillCategories = [
     {
       name: "Programming Languages",
-      skills: ["Python", "C++", "JavaScript", "SQL"]
+      skills: ["Python", "C++", "JavaScript", "SQL", "Scala", "Node.js", "TypeScript"]
     },
     {
-      name: "AI & NLP",
-      skills: ["RAG systems", "Embeddings", "Prompt Engineering", "LoRA Fine-tuning", "Model Evaluation", "Hugging Face", "Torch", "OpenCV"]
+      name: "AI & Machine Learning",
+      skills: ["PyTorch", "TensorFlow", "Hugging Face", "Transformers", "LLMs", "NLP", "RAG", "Prompt Engineering", "Computer Vision", "OpenCV", "scikit-learn", "Unsloth"]
     },
     {
-      name: "Data Analysis",
-      skills: ["Pandas", "Scikit-Learn", "Tableau", "Apache Spark", "Kafka", "Elasticsearch", "Looker Studio"]
+      name: "Backend & Web",
+      skills: ["Django", "Flask", "REST APIs", "React", "SQLAlchemy", "FastAPI"]
     },
     {
-      name: "Web Development",
-      skills: ["ReactJS", "NodeJS", "Django", "Flask", "MongoDB", "REST APIs", "HTML/CSS"]
+      name: "Data Engineering & Databases",
+      skills: ["PostgreSQL", "MySQL", "Qdrant", "Elasticsearch", "Apache Spark SQL", "Spark Streaming", "Kafka"]
+    },
+    {
+      name: "Data Analysis & Visualization",
+      skills: ["Pandas", "Matplotlib", "Tableau", "Kibana", "Excel PivotTables", "Excel PivotCharts", "QGIS"]
+    },
+    {
+      name: "MLOps & Development Tools",
+      skills: ["Git", "GitHub", "Docker", "AWS", "VS Code", "pgAdmin", "DVC", "Prometheus", "GitHub Actions", "MLflow"]
+    },
+    {
+      name: "Project Management",
+      skills: ["Notion", "Trello", "Linear"]
     }
   ];
 

@@ -28,8 +28,9 @@ nav {
 .hero-greeting { color: var(--accent-color); font-family: monospace; font-size: 1.1rem; }
 .hero-name { font-size: 4rem; color: var(--green-50); line-height: 1.1; margin: 0; }
 .hero-subtitle { font-size: 3rem; color: var(--gray-100); line-height: 1.1; margin: 0; }
-.hero-desc { max-width: 600px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6; }
-.hero-cta { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.hero-desc { max-width: 720px; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7; }
+.hero-education { color: var(--text-muted); font-size: 0.95rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
 
 /* Experience */
 .exp-timeline {
@@ -65,7 +66,7 @@ nav {
 /* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -82,6 +83,16 @@ nav {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px -15px var(--blue-900);
 }
+.project-demo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--blue-900);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 0 0 1.5rem;
+}
 .project-header { margin-bottom: 1rem; }
 .project-title { font-size: 1.5rem; color: var(--green-100); margin-bottom: 1rem; }
 .project-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem; }
@@ -92,6 +103,58 @@ nav {
   font-family: monospace;
   font-size: 0.85rem;
   color: var(--gray-100);
+}
+.project-marquee {
+  overflow: hidden;
+  margin: 0 0 2rem;
+  padding: 0.5rem 0;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.project-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: project-marquee-scroll 34s linear infinite;
+}
+.project-marquee:hover .project-marquee-track,
+.project-marquee:focus-within .project-marquee-track { animation-play-state: paused; }
+.project-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 3.25rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.85rem;
+  color: var(--green-100);
+  background: var(--bg-surface);
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.project-mark-logo {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  flex: 0 0 2rem;
+  border: 1px solid rgba(149, 213, 178, 0.42);
+  border-radius: 0.6rem;
+  color: var(--accent-color);
+  background: var(--blue-600);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.project-mark:hover,
+.project-mark:focus-visible { border-color: var(--accent-color); color: var(--accent-color); }
+@keyframes project-marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-marquee-track { animation: none; }
+  .project-marquee { overflow-x: auto; mask-image: none; }
 }
 
 /* Skills */
@@ -248,5 +311,10 @@ footer {
 @media (max-width: 768px) {
   .hero-name { font-size: 3rem; }
   .hero-subtitle { font-size: 2rem; }
+  .hero-desc { font-size: 1rem; }
   section { padding: 4rem 1.5rem; }
+}
+
+@media (max-width: 560px) {
+  .projects-grid { grid-template-columns: 1fr; }
 }
